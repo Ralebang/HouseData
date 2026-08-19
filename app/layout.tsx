@@ -1,7 +1,9 @@
 import "./globals.css";
 
+import { BuildingProvider } from "@/context/BuildingContext";
+
 export const metadata = {
-  title: "Taloyhtiö Dashboard",
+  title: "House Data Oy",
   description: "Taloyhtiön hallintajärjestelmä",
 };
 
@@ -12,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fi">
-      <body>{children}</body>
+      <body>
+        <BuildingProvider>{children}</BuildingProvider>
+      </body>
     </html>
   );
 }
